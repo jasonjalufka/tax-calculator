@@ -6,45 +6,7 @@ import theme from './theme';
 import { single, married } from './constants';
 import ToggleSwitch from './components/ToggleSwitch';
 
-// const Section = styled.div`
-//   display: flex;
-//   align-items: stretch;
-//   align-content: space-around;
-//   height: 50vh;
-//   width: 100vw;
-//   justify-content: ${props => (props.primary ? 'flex-start' : 'flex-end')};
-// `;
-
-// const Content = styled.h1`
-//   padding-left: 1em;
-//   padding-right: 1em;
-//   width: 100%;
-//   height: 100%;
-//   display: flex;
-//   color: ${props => (props.primary ? 'white' : 'orange')};
-// `;
-
-// const Button = styled.button`
-//   ${props => props.theme.animations.show}
-//   animation-delay: 200ms;
-//   opacity: 0;
-//   transform: translateY(20px);
-//   font-family: sans-serif;
-//   border: none;
-//   border-radius: ${theme.borderRadius};
-//   background: #00b4db;
-//   background: -webkit-linear-gradient(to right, #0083b0, #00b4db);
-//   background: linear-gradient(to right, #0083b0, #00b4db);
-
-//   color: white;
-//   padding-left: 10px;
-// `;
-
 const Layout = styled.div`
-  /* ${props => props.theme.animations.show}; */
-  /* animation-delay: 100ms; */
-  /* opacity: 0;
-  /* transform: translateY(20px); */
   display: flex;
   flex-wrap: wrap;
   align-items: stretch;
@@ -115,38 +77,6 @@ const IncomeInput = styled.input`
   }
 `;
 
-// const SubmitButton = styled.button`
-//   color: white;
-//   font-size: 1rem;
-//   font-weight: 300;
-//   text-transform: uppercase;
-//   border: none;
-//   outline: none;
-//   cursor: pointer;
-//   border-radius: ${theme.borderRadius};
-//   padding: 10px 15px;
-//   background: linear-gradient(to left, #5b86e5, #36d1dc);
-//   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
-//   position: relative;
-
-//   &:before {
-//     content: ' ';
-//     position: absolute;
-//     top: 0;
-//     right: 0;
-//     bottom: 0;
-//     left: 0;
-//     border-radius: ${theme.borderRadius};
-//     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-//     opacity: 0;
-//     transition: opacity 0.3s ease-in-out;
-//   }
-
-//   &:hover:before {
-//     opacity: 1;
-//   }
-// `;
-
 const Summary = styled.div`
   width: 60%;
   min-width: 350px;
@@ -204,7 +134,6 @@ const TableItem = styled.div`
     props.numerical ? 'Roboto Mono, monospace' : 'inherit'};
   width: 100%;
   flex-grow: 2;
-  /* margin-bottom: 20px; */
 `;
 
 const App = () => {
