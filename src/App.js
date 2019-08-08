@@ -191,10 +191,6 @@ const App = () => {
   const updateTableData = (grossIncome, status) => {
     const newTable = {};
     const data = status ? [...married] : [...single];
-    console.log(
-      'data stuff:',
-      isMarried ? 'loading married' : 'loading single'
-    );
     data.forEach(
       (bracket, index) =>
         (newTable[index] = {
