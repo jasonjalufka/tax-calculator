@@ -17,7 +17,6 @@ const Layout = styled.div`
 const IncomeBox = styled.div`
   display: flex;
   flex-direction: column;
-
   background-color: white;
   padding: 20px;
   border-radius: ${props => props.theme.borderRadius};
@@ -78,16 +77,34 @@ const IncomeInput = styled.input`
 `;
 
 const Summary = styled.div`
-  width: 60%;
-  min-width: 350px;
+  /* width: 60%; */
+  min-width: 300px;
   background: white;
   border-radius: ${props => props.theme.borderRadius};
   box-shadow: ${props => props.theme.boxShadow};
-  margin-top: 100px;
-  margin-bottom: 100px;
+  /* margin-top: 100px; */
+  /* margin-bottom: 100px; */
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
+
+  @media (max-width: 700px) {
+    width: 90%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: 701px) {
+    min-width: 350px;
+    min-height: 40%;
+    width: 60%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+
+  @media (max-width: 470px) {
+    font-size: 12px;
+  }
 `;
 
 const Table = styled.div`
@@ -102,7 +119,7 @@ const TableRow = styled.div`
   flex-wrap: wrap;
   justify-self: stretch;
   font-family: ${props =>
-    props.numerical ? 'Roboto Mono, monospace' : 'inherit'};
+    props.numerical ? 'Roboto Mono, monospace' : 'Roboto'};
   border-radius: ${props => (props.total ? '0' : theme.borderRadius)};
   border-top: ${props => (props.total ? '2px solid' : 'none')};
   border-image-source: linear-gradient(to left, #5b86e5, #36d1dc);
