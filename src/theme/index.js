@@ -55,7 +55,7 @@ const fontWeights = {
   black: 900
 };
 
-const borderRadius = '6px';
+const borderRadius = '20px';
 
 const boxShadow = '10px 10px 40px rgba(0, 0, 0, 0.2)';
 

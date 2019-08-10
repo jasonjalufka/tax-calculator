@@ -109,6 +109,7 @@ const Table = styled.div`
   width: 100%;
   padding: 15px;
   background: white;
+  border-radius: ${props => props.theme.borderRadius};
 `;
 
 const TableRow = styled.div`
