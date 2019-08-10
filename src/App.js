@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 import GlobalStyle from './theme/globalStyle';
 import theme from './theme';
-// import Parallax from 'react-rellax';
 import { single, married } from './constants';
 import ToggleSwitch from './components/ToggleSwitch';
 
@@ -59,7 +58,9 @@ const IncomeInput = styled.input`
   width: 100%;
   position: relative;
   padding: 10px 5px;
-  border: none;
+  border-right: 0 solid white;
+  border-left: 0 solid white;
+  border-top: 0 solid white;
   border-bottom: 2px solid;
   border-image-source: linear-gradient(to left, #5b86e5, #36d1dc);
   border-image-slice: 1;
@@ -77,13 +78,10 @@ const IncomeInput = styled.input`
 `;
 
 const Summary = styled.div`
-  /* width: 60%; */
   min-width: 300px;
   background: white;
   border-radius: ${props => props.theme.borderRadius};
   box-shadow: ${props => props.theme.boxShadow};
-  /* margin-top: 100px; */
-  /* margin-bottom: 100px; */
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -110,6 +108,7 @@ const Summary = styled.div`
 const Table = styled.div`
   width: 100%;
   padding: 15px;
+  background: white;
 `;
 
 const TableRow = styled.div`
@@ -121,7 +120,10 @@ const TableRow = styled.div`
   font-family: ${props =>
     props.numerical ? 'Roboto Mono, monospace' : 'Roboto'};
   border-radius: ${props => (props.total ? '0' : theme.borderRadius)};
-  border-top: ${props => (props.total ? '2px solid' : 'none')};
+  border-right: 0 solid white;
+  border-left: 0 solid white;
+  border-bottom: 0 solid white;
+  border-top: ${props => (props.total ? '2px solid' : '0px solid white')};
   border-image-source: linear-gradient(to left, #5b86e5, #36d1dc);
   border-image-slice: 1;
   color: ${props => (props.isBracket ? 'white' : 'inherit')};
@@ -131,6 +133,7 @@ const TableRow = styled.div`
   animation-delay: ${props => props.rowNumber * 10}ms;
   transform: translateY(-20px);
   opacity: 0;
+  outline: none;
 `;
 
 const TableColumn = styled.div`
@@ -139,9 +142,11 @@ const TableColumn = styled.div`
   flex-wrap: nowrap;
   flex-basis: 100%;
   flex: 1;
+  text-align: center;
 
   &:nth-child(1) {
     flex: 2;
+    text-align: left;
   }
 `;
 
