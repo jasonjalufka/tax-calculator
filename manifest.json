@@ -20,6 +20,6 @@
   ],
   "start_url": "/tax-calculator/",
   "display": "standalone",
-  "theme_color": "#000000",
+  "theme_color": "#36D1DC",
   "background_color": "#36D1DC"
 }
